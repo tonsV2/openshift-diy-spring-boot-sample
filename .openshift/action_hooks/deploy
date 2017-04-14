@@ -28,5 +28,5 @@ export PATH=$JAVA_HOME/bin:$PATH
 cd $OPENSHIFT_REPO_DIR
 
 $M2/mvn --version
-$M2/mvn -s .openshift/settings.xml clean install
+SPRING_PROFILES_ACTIVE=openshift $M2/mvn -s .openshift/settings.xml clean package
 
